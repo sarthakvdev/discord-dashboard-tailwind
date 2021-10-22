@@ -32,7 +32,8 @@ const Dropdown = ({ header, options }) => {
                 </h5>
                 <FaPlus size='12' className="text-accent text-opacity-80 my-auto ml-auto" />
             </div>
-            {/* {expanded && options && options.map(option => <TopicOption ) } */}
+            {expanded && options && 
+                options.map(option => <TopicOption option={option} />)}
         </div>
     );
 };
@@ -47,10 +48,13 @@ const ChevronIcon = ({ expanded }) => {
     );
 };
 
-// const TopicOption = () => {
-//     return(
-
-//     )
-// }
+const TopicOption = ({ option }) => {
+    return(
+        <div className="dropdown-option">
+            <BsHash size='24' className="text-gray-100" />
+            <h5 className="dropdown-option-text">{option}</h5>
+        </div>
+    );
+};
 
 export default ChannelBar;

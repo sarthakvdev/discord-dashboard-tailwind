@@ -33,13 +33,24 @@
     }
 
     .channel-bar {
-        @apply w-80 h-auto m-0 ml-16 bg-gray-700 text-white
+        @apply w-80 h-screen m-0 ml-16 bg-gray-800
+        overflow-hidden;
+    }
+
+    .channel-container {
+        @apply flex flex-col items-center justify-start 
+        p-1 m-0;
     }
 
     .channel-block {
-
+        @apply flex items-center justify-center
+        h-16 m-0 p-0;
     }
 
+    .channel-block-name {
+        @apply text-gray-400 font-bold text-lg tracking-wider
+        mr-auto ml-4 my-auto align-middle;
+    }
 
     .dropdown {
         @apply m-0 w-full px-2 pb-2
@@ -47,18 +58,31 @@
     }
 
     .dropdown-header {
-        @apply flex flex-row justify-center items-center;
+        @apply flex flex-row items-center justify-evenly
+        mx-0 text-gray-500 cursor-pointer;
     }
 
     .dropdown-header-text {
-
+        @apply text-gray-500 text-opacity-90
+        text-lg font-semibold
+        cursor-default;
     }
 
     .dropdown-header-text-selected {
-
+        @apply text-blue-500 tracking-wide text-opacity-90 text-lg font-semibold;
     }
 
-    .dropdown-selection {
+    .dropdown-option {
+        @apply flex flex-row items-center justify-evenly
+        mt-1 mr-auto ml-2
+        transition duration-300 ease-in-out
+        cursor-pointer;
+    }
 
+    .dropdown-option-text {
+        @apply text-gray-500 font-semibold tracking-wide
+        mr-auto
+        transition duration-300 ease-in-out
+        hover:text-gray-400;
     }
 }
